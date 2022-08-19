@@ -152,6 +152,8 @@ const removeOdd = (array) => {
 
 console.log("Bonus Q3: The number of odd numbers are:", removeOdd(numbers));
 
+console.log("------------------------------------------------------------");
+
 /**
  * 04
  * Telephone conversation price calculator
@@ -177,3 +179,8 @@ console.log("Bonus Q3: The number of odd numbers are:", removeOdd(numbers));
  * clearArray([3, 5, 1, 2, 2], 2, 3, 5) should return [1]
  * clearArray([2, 3, 2, 3], 2, 3) should return []
  */
+
+const clearArray = (array1, ...num) =>
+  array1.filter((acc) => !num.includes(acc));
+console.log("Bonus Q5:", clearArray([1, 2, 3, 1, 2, 3], 2, 3));
+console.log("Bonus Q5:", clearArray([1, 2, 3, 5, 1, 2, 3], 2, 3));
